@@ -1,5 +1,6 @@
 // import React, { useState } from "react";
-import Menu from "../../components/MenuButton";
+import MenuButton from "../../components/MenuButton";
+
 
 
 const Navbar: React.FC = () => {
@@ -46,7 +47,7 @@ const Navbar: React.FC = () => {
                         </div>
                         <div className="mr-2 flex md:hidden">
                             
-                                <Menu />
+                                <MenuButton />
                             
                         </div>
 

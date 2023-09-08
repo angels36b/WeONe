@@ -1,36 +1,58 @@
-.menu {
+.menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  background-color: #fff;
+}
+
+.menu-button.burger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+
+}
+
+.menu-button.burger:hover {
+  background-color: #eee;
+}
+
+.menu-button-options {
+  display: none;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.menu-button-options li{
+  list-style: none;
+  padding: 16px;
+  cursor: pointer;
+
+}
+
+.menu-button-options li:hover {
+  background-color: #eee;
+}
+
+@media (max-width: 728px) {
+  .menu-button {
     display: flex;
-    flex-direction: column;
-    width: 250px;
-    background-color: transparent;
-    color: white;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(-100%);
   }
-  
-  .menu.open {
-    transform: translateX(0);
-  }
-  
-  .cpu-button {
+
+  .menu-button-options {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
+  }
+
+  .menu-button-burger{
+    transition: 0.3s ease-in-out;
   }
   
-  .menu-items {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    li {
-      padding: 10px;
-      cursor: pointer;
-      &:hover {
-        background-color: #00CED1;
-      }
-    }
+  .menu-button-burger:hover {
+    background-color: #eee;
+    transform: scale(1.3);
   }
+}

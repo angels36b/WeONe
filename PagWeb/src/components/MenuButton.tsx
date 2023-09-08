@@ -1,40 +1,63 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
+import './MenuButton.css'
 
 
-const Menu: React.FC = () => {
-    const [isOpen, setIsOPen] = useState(false);
+const MenuButton = () => {
+
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsOPen(!isOpen);
+      setMenuOpen(!menuOpen);
     };
 
     return (
-        <div className={`menu ${isOpen ? 'open' : ''}`}
-        >
-            <button className="cpu-button" onClick={toggleMenu}>
+        <div className="menu-button">
+            <button onClick={toggleMenu}
+                className="text-purple-500 hover:text-blue-500 focus:outline-none"
+            >
+                <svg
+                    className={`w-6 h-6 ${menuOpen ? 'hidden' : 'block'}`}
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-                    {/* <!-- Fondo del botón: un círculo gris --> */}
-                    <circle cx="50" cy="50" r="40" fill="#888" />
-
-                    {/* <!-- Borde del botón: un círculo negro --> */}
-                    <circle cx="50" cy="50" r="42" fill="none" stroke="#000" stroke-width="4" />
-
-                    {/* <!-- Icono de encendido/apagado: un círculo blanco o negro -->  <!-- Para el estado "encendido" --> */}
-                    <circle cx="50" cy="50" r="20" fill="#fff" /> 
-                    {/* <!-- O -->  Para el estado "apagado" -->*/}
-                    <circle cx="50" cy="50" r="20" fill="#000" /> 
+                <svg
+                    className={`w-6 h-6 ${menuOpen ? 'block' : 'hidden'}`}
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
-            {isOpen && (<ul className="menu-items">
-                <li>Inicio</li>
-                <li>Servicios</li>
-                <li>Contacto</li>
-            </ul>
-            )}
 
+            <div className={`md:flex ${menuOpen ? 'block' : 'hidden'}`}>
+                <ul className="md:flex space-x-4 mt-4 md:mt-0">
+                    <li>
+                        <a href="#" className="text-black hover:text-blue-500">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" className="text-black hover:text-blue-500">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
+
+
     );
 };
 
-export default Menu;
+export default MenuButton
