@@ -1,0 +1,36 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: transparent;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+  }
+  
+  .menu.open {
+    transform: translateX(0);
+  }
+  
+  .cpu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .menu-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      padding: 10px;
+      cursor: pointer;
+      &:hover {
+        background-color: #00CED1;
+      }
+    }
+  }
