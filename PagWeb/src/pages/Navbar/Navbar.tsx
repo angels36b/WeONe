@@ -1,61 +1,60 @@
 // import React, { useState } from "react";
+import { useState } from "react";
+
 import MenuButton from "../../components/MenuButton";
 
 
 
 const Navbar: React.FC = () => {
 
-    // let Links = [
-    //     {name: "Quienes somos", link:"/"},
-    //     {name: "Contact",link:"/"}
+    const [menuOpen, setMenuOpen] = useState(false)
 
-    // ]; 
-    // const [open, setOpen]=useState(false);
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    }
 
-
-    // const [isOpen, setIsOpen] = useState(false);
-
-    // const toggleNavbar = () => {
-    //     setIsOpen(!isOpen);
-    // };
     return (
         <>
-
-            <div className="flex items-center justify-between shadow-md w-full fixed top-0 left-0 shrink-0 ">
-
-                <div className=" max-w-7xl mx-auto bg-gradient-to-r py-4 md:px-10 px-7">
-                    <div className="flex items-center h-16">
-                        <div className="flex-shrink-0">
-
+            <nav className="bg-white shadow-lg" >
+                <div className="container mx-auto px-4">
+                    <div className=" flex justify-between items-center py-4">
+                        <div className="flex items-center">
+                            <span className="text-xl font-semibold ml-2">WeOne</span>
                         </div>
-                        <div className="hidden md:block">
-                            <div className=" font-bold font-montserrat text-2xl cursor-pointer font-[Poppins] text-black-80 ">
-
-                                <span className=" text-3xl text-indigo-600 mx-9 pt-2 hover:text-white">
-                                    Who we?
-                                </span>
-
-                                <span className="text-3xl text-indigo-600 mx-9 pt-2">
-                                    proccess
-                                </span>
-
-                                <span className="text-3xl text-indigo-600 mx-9 pt-2">
-                                    computer
-                                </span>
-
-                            </div>
+                        <div className="hidden md:flex space-x-6">
+                            <a href="#" className="text-gray-700 hover:text-gray-900">About us</a>
+                            <a href="#" className="text-gray-700 hover:text-gray-900">Text</a>
+                            <a href="#" className="text-gray-700 hover:text-gray-900">Computadores</a>
+                            <a href="#" className="text-gray-700 hover:text-gray-900">Ciencia</a>
                         </div>
-                        <div className="mr-2 flex md:hidden">
-                            
-                                <MenuButton />
-                            
+
+                        <div className=" md:hidden">
+                            <button onClick={toggleMenu} className="text-gray-700 hover:text-gray-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="3" y1="12" x2="21" y2="12" />
+                                    <line x1="3" y1="6" x2="21" y2="6" />
+                                    <line x1="3" y1="18" x2="21" y2="18" />
+                                </svg>
+                            </button>
+
+
                         </div>
 
                     </div>
+                    {
+                        menuOpen && (
+                            <div className="md:hidden">
+                                <a href="#" className="block py-2  text-gray-700 hover:text-gray-900">About us</a>
+                                <a href="#" className="block py-2 text-gray-700 hover:text-gray-900">Text</a>
+                                <a href="#" className="block py-2 text-gray-700 hover:text-gray-900">Computadores</a>
+                                <a href="#" className="block py-2 text-gray-700 hover:text-gray-900">Ciencia</a>
+                            </div>
+                        )
+                    }
 
                 </div>
 
-            </div>
+            </nav>
         </>
     );
 
