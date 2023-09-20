@@ -9,8 +9,9 @@ import Navbar from "./pages/Navbar/Navbar"
 function App() {
     return (
         <>
-            <MainPage/>
             <Navbar />
+            <MainPage/>
+            
 
         </>
     )
