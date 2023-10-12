@@ -1,6 +1,6 @@
 import React from "react";
 import weOneImage from "../../assets/escritorio3.jpg"
-
+import IconoGamer from "../../assets/images/IconoGamer.png"
 
 const MainPage: React.FC = () => {
 
@@ -15,28 +15,27 @@ const MainPage: React.FC = () => {
                 <section className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white py-2 px-4 rounded">
                     <div className="relative container px-2 py-18 mx-auto">
                         {/* titulo */}
-                        <div className="text-center mb-20 ">
+                        <div className="text-center hidden xl:block ">
                             <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Raw Denim Heirloom Man Braid</h1>
                             <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug.</p>
                             <div className="flex mt-6 justify-center">
                                 <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
                             </div>
                         </div>
-                        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6 bg">
+                        //
+                        <div className="flex flex-wrap sm:-m-4 -mx-4 -mt-4 md:space-y-0 space-y-6">
 
                             {/* Primer card */}
-                            <div className=" p-4 md:w-1/3 flex flex-col text-center items-center  hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
+                            <div className=" p-4 md:w-1/3 sm:w-1/2 flex flex-col text-center items-center hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
 
-                                <div className="bg-slate-300 p-2 m-1 rounded-md  ">
-                                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-orange-300 text-indigo-500 mb-5 flex-shrink-0">
-                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10" viewBox="0 0 24 24">
-                                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                                        </svg>
+                                <div className="bg-slate-300 p-2 m-1 rounded-md">
+                                    <div className="flex justify-center">
+                                    <img src={IconoGamer} alt="Icone" className="h-32 w-32 rounded-full" />
                                     </div>
 
                                     <div className=" flex-grow ">
-                                        <h2 className="text-black  text-lg title-font font-medium mb-3">Shooting Stars</h2>
-                                        <p className="leading-relaxed text-black">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+                                        <h2 className="text-black  text-lg title-font font-medium mb-3">SE UN GAMER</h2>
+                                        <p className="leading-relaxed text-black">Construye tu Gamer y rompe las barreras</p>
                                         <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
                                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -47,7 +46,7 @@ const MainPage: React.FC = () => {
                             </div>
                             {/* segundor card */}
 
-                            <div className=" p-4 md:w-1/3 flex flex-col text-center items-center hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
+                            <div className=" p-4 md:w-1/3 sm:w-1/2 flex flex-col text-center items-center hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
                                 <div className="bg-slate-300 p-2 m-1 rounded-md ">
                                     <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
                                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10" viewBox="0 0 24 24">
@@ -69,7 +68,7 @@ const MainPage: React.FC = () => {
                             </div>
 
                             {/* tercer card */}
-                            <div className="p-4 md:w-1/3 flex flex-col text-center items-center hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
+                            <div className="p-4 md:w-1/3 sm:w-1/2 flex flex-col text-center items-center hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] dark:shadow-gray-700/25">
                                 <div className="bg-slate-300 p-2 m-1 rounded-md ">
                                     <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
                                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10" viewBox="0 0 24 24">
@@ -89,8 +88,7 @@ const MainPage: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-                    </div>
+              </div>
 
                 </section>
                 {/* <div className="container mx-auto px-4">
