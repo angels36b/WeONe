@@ -12,9 +12,9 @@ const Navbar: React.FC = () => {
 
     return (
         <>
-            <nav className="bg-white shadow-lg" >
-                <div className="container mx-auto px-4">
-                    <div className=" flex justify-between items-center py-4">
+            <nav className="bg-white shadow-lg px-1 py-1" >
+                <div className="container mx-auto">
+                    <div className=" flex justify-between items-center">
                         <div className="flex items-center">
                             <span className="text-xl font-semibold ml-2">WeOne</span>
                         </div>
